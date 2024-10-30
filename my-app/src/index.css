@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app {
+    @apply relative min-h-screen bg-white text-black dark:text-white py-[57px] md:py-[64px] dark:bg-body_dark dark:transition-colors dark:duration-300;
+  }
+  .page-title {
+    @apply text-center text-3xl font-bold;
+  }
+  .sidebar {
+    @apply fixed top-0 z-10 block h-screen w-3/4 bg-white text-black shadow-r-primary rounded-r-xl transition-all dark:bg-lighter-dark dark:text-white dark:shadow-white md:hidden;
+  }
+  .search-site {
+    @apply mt-1 w-32 rounded-lg bg-[#F0F2F5] bg-none px-3 py-1 focus-visible:outline-none group-hover:bg-[#ff7b003b] dark:group-hover:bg-[#edddb9] text-black;
+  }
+  .swiper-navigation-btn {
+    @apply text-2xl lg:text-3xl absolute bottom-2 lg:bottom-5 z-10 cursor-pointer text-gray-100 hover:text-white transition-colors;
+  }
+  .topic {
+    @apply relative text-lg font-bold before:absolute before:-bottom-3 before:left-0 before:h-0 before:w-0 before:border-r-8 before:border-t-8 before:border-solid before:border-r-transparent before:border-t-primary-color before:content-[''] after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-20 after:bg-primary-color after:content-[''];
+  }
+  .top_coursesImage {
+    @apply aspect-video w-full rounded border-2 border-white object-cover shadow-secondary transition-colors hover:border-primary-color;
+  }
+  .top_courses_description {
+    @apply self-center text-xs text-darker-light transition-colors hover:text-primary-color lg:text-lg;
+  }
+}
+
+.Just4Rows {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.Just3Rows {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+  width: 16px;
+  height: 6px;
+  border-radius: 50px;
+}
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  transition-property: width;
+  transition-behavior: normal;
+  transition-duration: 400ms;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
